@@ -25,7 +25,7 @@ X_train = scaler.fit_transform(X_train)
 X_test = scaler.fit_transform(X_test)
 
 # Training the Logistic Regression model on the Training set
-from sklearn.linear_model import LogisticRegression #40%-50%
+from sklearn.linear_model import LogisticRegression 
 classifier = LogisticRegression()
 classifier.fit(X_train, y_train)
 
