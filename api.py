@@ -7,6 +7,10 @@ app = Flask(__name__)
 def test():
     return "Hello user, this is a test"
 
+@app.route("/api/fraud-detection/health.json")
+def health():
+    return jsonify({"status": "UP"}), 200
+
 @app.route("/api/fraud-detection/run")
 def run_model():
     result = fraud_detection_model.run_model()
